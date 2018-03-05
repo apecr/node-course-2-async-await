@@ -24,10 +24,10 @@ describe('Currency convert', () => {
         .to.include('100 CAD is worth 77.639 USD')
         .and.to.include('United States of America'));
   });
-  it.only('should convert currency from CAD to USD with async await', () => {
+  it('should convert currency from CAD to USD with async await', () => {
     return covertCurrencyAlt('CAD', 'USD', 100)
       .then(response => expect(response)
         .to.include('100 CAD is worth 77.639 USD')
         .and.to.include('United States of America'));
-  }).timeout(4000);
+  });
 });
